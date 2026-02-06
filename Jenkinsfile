@@ -16,7 +16,6 @@ pipeline {
              sh """
                echo "By using the Hybrid method building the pipeline"
                echo $COURSE
-               sleep 10
                """
            }
          }
@@ -27,7 +26,6 @@ pipeline {
               sh """
                  echo "By using the Hybrid method testing the pipeline"
                  echo $COURSE
-                 env
                  """
             }
            
