@@ -9,6 +9,7 @@ pipeline {
     }
     options {
         timeout(time: 10, unit: 'SECONDS') 
+    }
     stages {
        stage('Build')  {
          steps {
@@ -26,6 +27,7 @@ pipeline {
               sh """
                  echo "By using the Hybrid method testing the pipeline"
                  echo $COURSE
+                 sleep 10
                  """
             }
            
