@@ -27,8 +27,19 @@ pipeline {
          steps {
            script {
              sh """
-               echo "By using the Hybrid method building the pipeline"
-               echo $COURSE
+                echo "By using the Hybrid method building the pipeline"
+                echo $COURSE
+                env
+
+                echo "Hello ${params.PERSON}"
+
+                echo "Biography: ${params.BIOGRAPHY}"
+
+                echo "Toggle: ${params.TOGGLE}"
+
+                echo "Choice: ${params.CHOICE}"
+
+                echo "Password: ${params.PASSWORD}"
                """
            }
          }
