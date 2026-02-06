@@ -30,7 +30,7 @@ pipeline {
            steps {
              script {
                 sh """
-                echo "By using the Hybrid method testing the pipeline"
+                echo "By using the Hybrid method deploying the pipeline"
 
                 """
              }
