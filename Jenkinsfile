@@ -25,7 +25,14 @@ pipeline {
     post {
         always {
             echo "I always say Hello..!"
+            cleanWs()
+        }
+        success {
+             echo "i will run if successfull"
+        }
+        failure {
+             echo "i will run if failure"
         }
     }
-
+     
 }
