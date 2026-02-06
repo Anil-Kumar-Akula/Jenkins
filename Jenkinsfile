@@ -7,17 +7,33 @@ pipeline {
     stages {
        stage('Build')  {
          steps {
-           echo "Building"
+           script {
+             sh """
+               echo "By using the Hybrid method building the pipeline"
+
+               """
+           }
          }
        }
         stage('Test') { 
           steps {
-            echo "Testing"
+            script {
+              sh """
+                 echo "By using the Hybrid method testing the pipeline"
+
+                 """
+            }
+           
           }
         }
         stage('Deploy') {
            steps {
-             echo "Deploying"
+             script {
+                sh """
+                echo "By using the Hybrid method testing the pipeline"
+
+                """
+             }
            }
         }
  
