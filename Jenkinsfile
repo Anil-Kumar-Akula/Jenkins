@@ -24,6 +24,7 @@ pipeline {
               sh """
                  echo "By using the Hybrid method testing the pipeline"
                  echo $COURSE
+                 env
                  """
             }
            
