@@ -4,13 +4,16 @@ pipeline {
           label 'AGENT-1'
        }
     }
+    environment {
+         COURSE = "jenkins"
+    }
     stages {
        stage('Build')  {
          steps {
            script {
              sh """
                echo "By using the Hybrid method building the pipeline"
-
+               echo $COURSE
                """
            }
          }
@@ -20,7 +23,7 @@ pipeline {
             script {
               sh """
                  echo "By using the Hybrid method testing the pipeline"
-
+                 echo $COURSE
                  """
             }
            
@@ -31,7 +34,7 @@ pipeline {
              script {
                 sh """
                 echo "By using the Hybrid method deploying the pipeline"
-
+                echo $COURSE
                 """
              }
            }
